@@ -35,7 +35,7 @@ if (isset($_GET['remove'])) {
         <div id="form-content-col1" class="fc">
             <div id="form-1" class="form">
                 <form action="masukan.php" method="post">
-                    <h2>Masukkan data</h2>
+                    <h2>Tambahkan data</h2>
                     <div class="fm-row1 fm-row">
                         <label for="nama" name="nama">Nama:</label>
                         <input type="text" id="nama" name="nama" required>
@@ -73,7 +73,7 @@ if (isset($_GET['remove'])) {
                         <!-- kalo data tidak di temukan -->
                         <?php
                         if (!$rowsData) {
-                            echo '<tr><td colspan="2" style="text-align:center; color: white;">Tidak ada data.</td></tr>';
+                            echo '<tr><td colspan="5" style="text-align:center;">Tidak ada data.</td></tr>';
                         } else {
                             foreach ($rowsData as $rowData) {
                         ?>
@@ -101,8 +101,8 @@ if (isset($_GET['remove'])) {
                 <form action="edit.php" method="post">
                     <h2>Edit data</h2>
                     <div class="fm-row2 fm-row">
-                        <label for="nim-we" name="nim-we">Nim:</label>
-                        <input type="text" id="nim-we" name="nim-we" required>
+                        <label for="nim-edited" name="nim-edited">Nim:</label>
+                        <input type="text" id="nim-edited" name="nim-edited" required>
                         <?php
                         if (isset($_GET['nodata'])) {
                             echo '<p class="nodata">Nim tidak ditemukan.</p>';
@@ -111,18 +111,18 @@ if (isset($_GET['remove'])) {
                         ?>
                     </div>
                     <div class="fm-row1 fm-row">
-                        <label for="nama-we" name="nama-we">Nama:</label>
-                        <input type="text" id="nama-we" name="nama-we">
+                        <label for="nama-edited" name="nama-edited">Nama:</label>
+                        <input type="text" id="nama-edited" name="nama-edited">
                     </div>
                     <div class="fm-row3 fm-row">
-                        <label for="prodi-we" name="prodi-we">Prodi:</label>
-                        <input type="text" id="prodi-we" name="prodi-we">
+                        <label for="prodi-edited" name="prodi-edited">Prodi:</label>
+                        <input type="text" id="prodi-edited" name="prodi-edited">
                     </div>
                     <div class="fm-row4 fm-row">
-                        <label for="alamat-we" name="alamat-we">Alamat:</label>
-                        <textarea name="alamat-we" id="alamat-we"></textarea>
+                        <label for="alamat-edited" name="alamat-edited">Alamat:</label>
+                        <textarea name="alamat-edited" id="alamat-edited"></textarea>
                     </div>
-                    <button type="submit" name="submit-we">Submit</button>
+                    <button type="submit" name="submit-edited">Submit</button>
                 </form>
             </div>
 
